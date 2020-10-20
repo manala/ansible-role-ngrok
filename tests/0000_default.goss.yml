@@ -1,7 +1,5 @@
 ---
 
-# Version
-{{ if has "version" .Vars.tags }}
 file:
   /usr/local/bin/ngrok:
     exists: true
@@ -9,9 +7,9 @@ file:
     owner: root
     group: root
     mode: "0755"
+
 command:
   ngrok --version:
     exit-status: 0
     stdout:
-      - ngrok version 2.2.2
-{{ end }}
+      - ngrok version
